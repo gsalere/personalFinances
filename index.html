@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finanças Pessoais</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <h1>Minhas Finanças</h1>
+    <main>
+      <form id="form" action="http://localhost:3000/transactions" method="post">
+        <h2>Adicionar uma transação:</h2>
+        <input type="hidden" id="id" name="id" />
+        <label for="name">Nome:</label>
+        <br />
+        <input type="text" id="name" name="name" />
+        <br />
+        <label for="amout">Valor:</label>
+        <br />
+        <input type="number" step="0.01" id="amount" name="amount" />
+        <br />
+        <button>Salvar</button>
+      </form>
+      <div>
+        <h2 class="balance">Saldo: <span id="balance"></span></h2>
+        <h2>Histórico de Transações</h2>
+        <section id="transactions"></section>
+      </div>
+    </main>
+  </body>
+</html>
